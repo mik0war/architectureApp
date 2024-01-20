@@ -43,4 +43,12 @@ class TestQuoteService : QuoteService {
 
         return quotesList[index]
     }
+
+    override suspend fun getQuotesList(): List<QuoteServerModel> {
+        return listOf(
+            QuoteServerModel("first", "first text", "test author", listOf("First")),
+            QuoteServerModel("second", "second text", "test author", listOf("Second")),
+            QuoteServerModel("third", "third text", "test author", listOf("First", "Second"))
+        )
+    }
 }

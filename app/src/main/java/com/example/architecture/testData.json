@@ -1,0 +1,29 @@
+[
+  {
+    "_id": "test id 1",
+    "content": "Test quote text 1",
+    "author": "test quote author 2",
+    "tags": [
+      "test tag 1",
+      "test tag 2",
+      "test tag 3"
+    ]
+  },
+  {
+    "_id": "test id 2",
+    "content": "Test quote text",
+    "author": "test quote author",
+    "tags": [
+      "test tag 1",
+      "test tag 2"
+    ]
+  },
+  {
+    "_id": "test id 3",
+    "content": "Test quote text 3",
+    "author": "test quote author 3",
+    "tags": [
+      "test tag 3"
+    ]
+  }
+]

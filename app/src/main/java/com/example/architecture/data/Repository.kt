@@ -11,8 +11,16 @@ class Repository(
     private val dispatcher: CoroutineDispatcher = Dispatchers.IO
 ) {
 
-    suspend fun getQuote(): Quote = withContext(dispatcher){
+    suspend fun getQuote(): Quote = withContext(dispatcher) {
         return@withContext service.getQuote().toQuoteModel()
     }
+}
 
+class RepositoryList(
+    private val service: QuoteService,
+    private val dispatcher: CoroutineDispatcher = Dispatchers.IO
+) {
+    suspend fun getQuotes(): List<Quote> = withContext(dispatcher) {
+        return@withContext service.getQuotesList().map { it.toQuoteModel() }
+    }
 }
